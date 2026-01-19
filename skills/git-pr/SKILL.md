@@ -86,5 +86,8 @@ else
     gh pr edit "$EXISTING_PR" --title "$PR_TITLE" --body "$PR_BODY"
 fi
 
+# Show PR URL
+PR_URL=$(gh pr view "$BRANCH_NAME" --json url --jq .url)
 echo "✅ PR workflow completed: $PR_TITLE"
+echo "🔗 Link: $PR_URL"
 ```
