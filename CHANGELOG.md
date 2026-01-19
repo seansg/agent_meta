@@ -10,3 +10,4 @@
   - Updated prompt question to specific Chinese phrase: "PR title 是否需要加上 prefix?".
 - **git-commit-formatter**
   - Added pre-commit check for lint/format scripts.
+  - Added instruction to encourage atomic commits for distinct changes.

@@ -8,9 +8,11 @@ description: Formats git commit messages according to Conventional Commits speci
 When writing a git commit message, you MUST follow the Conventional Commits specification.
 
 ## Format
+
 `<type>[optional scope]: <description>`
 
 ## Allowed Types
+
 - **feat**: A new feature
 - **fix**: A bug fix
 - **docs**: Documentation only changes
@@ -24,20 +26,20 @@ When writing a git commit message, you MUST follow the Conventional Commits spec
 
 0. **Pre-commit Check**: Before analyzing changes or generating the message, check for lint or format scripts (e.g., `npm run lint`, `npm run format`) in the project. Run them if they exist.
 
-1. The commit message MUST be written in English only.
+1. **Atomic Commits**: You do NOT need to squash all changes into a single commit. If the changes represent multiple distinct topics (e.g., a feature and a refactor), split them into multiple commits.
+
+2. The commit message MUST be written in English only.
    Even if the user provides information in Chinese, translate it and output English.
    Do NOT include any non-English text.
 
-2. Analyze the changes to determine the primary `type`.
+3. Analyze the changes to determine the primary `type`.
 
-3. Identify the `scope` if applicable (e.g., specific component or file).
+4. Identify the `scope` if applicable (e.g., specific component or file).
 
-4. Write a concise `description` in imperative mood (imperative form).
+5. Write a concise `description` in imperative mood (imperative form).
 
-5. If there are breaking changes, add a footer starting with `BREAKING CHANGE:`.
-
+6. If there are breaking changes, add a footer starting with `BREAKING CHANGE:`.
 
 ## Example
+
 `feat(auth): implement login with google`
-
-
